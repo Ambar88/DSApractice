@@ -1,0 +1,27 @@
+#include<vector>
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main(){
+    string str;
+    cin>>str;
+  int n=str.size();
+        int count[26]={0};
+        for(int i=0;i<n;i++){
+        int index=str[i]-'a';
+        count[index]++;
+        }
+        int max=0;
+        for(int i=0;i<26;i++){
+            if(count[i]>max){
+                max=count[i];
+            }
+        }
+         for(int i=0;i<26;i++){
+             if(count[i]==max){
+                 char c=max +'a';
+                 return c;
+             }
+         }
+         return 0;
+}
