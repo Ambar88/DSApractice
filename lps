@@ -1,0 +1,15 @@
+int j=0,i=1;
+int lps[s.size()]={0};
+while(i<s.size()){
+    if(s[i] == s[j]){
+        lps[i]=j+1;
+        i++,j++;
+    }
+    else{
+        if(j !=0)
+        j=lps[j-1];
+        else
+        i++;
+    }
+}
+cout<<lps[s.size()-1];
