@@ -26,9 +26,9 @@ class Solution
          int first=l,second=m+1,pos=0;
          while(first <=m &&  second<=r){
              if(arr[first]<=arr[second])
-             ans[pos++]=ans[first++];
+             ans[pos++]=arr[first++];
              else
-             ans[pos++]=ans[second++];
+             ans[pos++]=arr[second++];
          }
          
          while(first<=m)
